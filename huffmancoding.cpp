@@ -78,7 +78,7 @@ vector<int> readFile( ){
 
 void encodeFile(unordered_map<char,string>map){
     ifstream file("input.txt");
-    ofstream file2("output.txt");
+    ofstream file2("encoded_output.txt");
     char c;
     while(file.get(c)){
          string s=map[c];
@@ -90,8 +90,8 @@ void encodeFile(unordered_map<char,string>map){
     return;
 }
 void decodeFile(unordered_map<string,char>m){
-    ifstream file ("output.txt");
-    ofstream file2("output2.txt");
+    ifstream file ("encoded_output.txt");
+    ofstream file2("decoded_output.txt");
     char c;
     string s="";
     while(file.get(c)){
