@@ -5,7 +5,7 @@ struct TreeNode{
     TreeNode* left;
     TreeNode* right;
 };
-unordered_map<string,char> fn(unordered_map<char,string>map){
+unordered_map<string,char> mapReorder(unordered_map<char,string>map){
     unordered_map<string,char>m;
     for(auto it:map){
         m[it.second]=it.first;
@@ -114,7 +114,7 @@ int main(){
     unordered_map<char,string>map;
     saveCodes(root,map,"");
     unordered_map<string,char>m;
-    m=fn(map);
+    m=mapReorder(map);
     encodeFile(map);
     decodeFile(m);
     return 0;
